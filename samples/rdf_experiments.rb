@@ -1,12 +1,7 @@
-require 'rdf/json'
-
-
 require 'rdf'
+require 'rdf/json'
 require 'rdf/ntriples'
 require 'rdf/raptor'
-
-#include RDF
-
 
 class RdfExperiments
   def read_write
@@ -18,15 +13,17 @@ class RdfExperiments
     end
 
 
-    RDF::Writer.open("hello.nt") do |writer|
+    RDF::Writer.open(File.dirname(__FILE__) + '/../data.d/hello.nt') do |writer|
       writer << RDF::Graph.new do |graph|
         graph << [:hello, RDF::DC.title, "Hello, world!"]
+        graph << [:publisher, RDF::DC.person, "Roger Andel"]
       end
     end
 
-    RDF::JSON::Writer.open('hello.json') do |writer|
+    RDF::JSON::Writer.open(File.dirname(__FILE__) + '/../data.d/hello.json') do |writer|
       writer << RDF::Graph.new do |graph|
         graph << [:hello, RDF::DC.title, "Hello, world!"]
+        graph << [:publisher, RDF::DC.person, "Roger Andel"]
       end
     end
   end

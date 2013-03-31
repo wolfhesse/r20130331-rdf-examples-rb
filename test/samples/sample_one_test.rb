@@ -1,13 +1,8 @@
-require 'minitest/unit'
-require 'minitest/reporters'
-MiniTest::Reporters.use!
+require File.dirname(__FILE__) + '/../test_helper'
+require File.dirname(__FILE__) + '/../../samples/sample_one'
+require File.dirname(__FILE__) + '/../../samples/rdf_experiments'
 
-require 'test/unit'
-require File.dirname(__FILE__) + '/../sample_two'
-
-
-require 'test_helper'
-class SampleTwoTest < Test::Unit::TestCase
+class SampleOneTest < Test::Unit::TestCase
 
   # Called before every test method runs. Can be used
   # to set up fixture information.
@@ -30,11 +25,16 @@ class SampleTwoTest < Test::Unit::TestCase
   end
 
   def test_create_instance
-    sample_two = SampleTwo.new
-    assert_not_nil(sample_two)
+    sample_one = SampleOne.new
+    assert_not_nil(sample_one)
   end
 
   def sample_one_running
-    SampleTwo.new.run
+    SampleOne.new.run
+  end
+
+  def test_rdf_exp
+    r = RdfExperiments.new
+    r.read_write
   end
 end

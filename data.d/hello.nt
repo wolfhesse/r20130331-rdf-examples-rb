@@ -1,0 +1,2 @@
+_:hello <http://purl.org/dc/terms/title> "Hello, world!" .
+_:publisher <http://purl.org/dc/terms/person> "Roger Andel" .

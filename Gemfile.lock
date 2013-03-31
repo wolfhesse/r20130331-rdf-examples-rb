@@ -20,6 +20,10 @@ GEM
     rdf-json (1.0.0)
       json_pure (>= 1.4)
       rdf (>= 1.0)
+    rdf-raptor (0.3.0)
+      rdf (>= 0.1.9)
+    rdf-trix (1.0.0)
+      rdf (>= 1.0)
     spork (0.9.2)
     spork-minitest (0.0.3)
       spork
@@ -37,6 +41,8 @@ DEPENDENCIES
   minitest-reporters (>= 0.5.0)
   rdf
   rdf-json
+  rdf-raptor
+  rdf-trix
   spork
   spork-minitest
   spork-testunit

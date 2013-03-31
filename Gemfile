@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rdf'
 gem 'rdf-json'
+gem 'rdf-raptor'
+gem 'rdf-trix'
 
 
 group :test do

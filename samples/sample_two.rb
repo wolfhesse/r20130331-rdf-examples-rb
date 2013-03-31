@@ -1,6 +1,9 @@
-require 'rdf/ntriples'
 
-include RDF
+require 'rdf'
+require 'rdf/json'
+require 'rdf/ntriples'
+require 'rdf/raptor'
+#include RDF
 
 class SampleTwo
 

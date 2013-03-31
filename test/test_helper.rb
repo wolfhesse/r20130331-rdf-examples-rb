@@ -1,5 +1,13 @@
 require 'rubygems'
 require 'spork'
+
+require 'test/unit'
+
+require 'minitest/unit'
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
+
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
