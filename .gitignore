@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 .idea
-=======
+
 *.gem
 *.rbc
 .bundle
@@ -19,4 +19,4 @@ tmp
 .yardoc
 _yardoc
 doc/
->>>>>>> remotes/github/master
+
